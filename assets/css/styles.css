@@ -406,6 +406,19 @@ img{
     font-size: var(--normal-font-size);
     cursor: pointer;
 }
+.aButton{
+    display: block;
+    margin-top: 50px;
+    background-color: var(--first-color);
+    color: var(--white-color);
+    padding: .75rem 2.5rem;
+    width: 200px;
+    border-radius: .5rem;
+    border: none;
+    outline: none;
+    font-size: var(--normal-font-size);
+    cursor: pointer;
+}
 
 /* ===== FOOTER=====*/
 .footer{
