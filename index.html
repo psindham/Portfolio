@@ -11,7 +11,7 @@
         <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
         <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
         <title>Pradeep Porfolio</title>
-        <link rel="shortcut icon" type="image/x-icon" href="/fav.ico">
+        <link rel="shortcut icon" type="image/x-icon" href="./assets/img/favicon.ico">
     </head>
     <body>
         <!--===== HEADER =====-->
@@ -262,14 +262,12 @@
                         <span class="contact__text">From Gujarat,India</span>
                     </div>
 
-                    <form action="" class="contact__form">
+                    <form method="POST" class="contact__form">
                         <div class="contact__inputs">
-                            <input type="text" placeholder="Name" class="contact__input">
-                            <input type="mail" placeholder="Email" class="contact__input">
+                            <input type="text" id="name" required placeholder="Name" class="contact__input">
+                            <input type="mail" id="email" required placeholder="Email" class="contact__input">
                         </div>
-
-                        <textarea name="" id="" cols="0" rows="10" class="contact__input"></textarea>
-
+                        <textarea name="" id="message" placeholder="Get in Touch with me..." required cols="0" rows="10" class="contact__input"></textarea>
                         <input type="submit" value="Submit" class="contact__button">
                     </form>
                 </div>
@@ -306,7 +304,7 @@
 
             </div>
         </footer>
-
+        <script src="https://smtpjs.com/v3/smtp.js"> </script>
         <!--===== SCROLL REVEAL =====-->
         <script src="https://unpkg.com/scrollreveal"></script>
 

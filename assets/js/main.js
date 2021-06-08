@@ -74,3 +74,34 @@ sr.reveal('.contact__subtitle', {})
 sr.reveal('.contact__text', {interval: 200})
 sr.reveal('.contact__input', {delay: 400})
 sr.reveal('.contact__button', {delay: 600})
+
+/*SUBMIT FORM*/
+document.querySelector(".contact__form").addEventListener("submit",
+submitForm
+);
+
+function submitForm(e){ 
+    
+    e.preventDefault(); 
+    // Get input Values 
+    let name = document.querySelector("#name").value;
+    let email = document.querySelector("#email").value; 
+    let message = document.querySelector("#message").value; 
+    // saveContactInfo(name, email, message);
+     document.querySelector(".contact__form").reset();
+      sendEmail(name, email, message); 
+ }
+
+ function sendEmail(name, email, message) 
+ {
+      Email.
+        send({ 
+            Host: "smtp.gmail.com",
+            Username: "pradeepsin98@gmail.com", 
+            Password: "eypaomroajvuernm",
+            To: "pradeepsin98@gmail.com", 
+            From: "pradeepsin98@gmail.com", 
+            Subject: `${name} sent you a message`, 
+            Body: `Name:${name} <br/> Email: ${email} <br/> Message: ${message}`,
+         }).then((message)=>alert("mail sent successfully")) 
+} 
